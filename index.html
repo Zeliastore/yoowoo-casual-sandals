@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FloorScrubBrush3In1 - Sikat Lantai Revolusioner</title>
+    <title>FloorScrub Brush 3In1 - Revolusi Pembersihan Lantai Modern</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -25,150 +25,118 @@
             padding: 0 20px;
         }
 
-        /* Header Section */
-        .hero {
+        /* Header */
+        .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 60px 0;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
 
-        .hero::before {
+        .header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
         }
 
         .hero-content {
-            text-align: center;
             position: relative;
             z-index: 2;
         }
 
-        .hero h1 {
+        .badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 14px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .hero-title {
             font-size: 3.5rem;
             font-weight: bold;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: slideInDown 1s ease-out;
+            animation: slideInUp 1s ease;
         }
 
-        .hero p {
-            font-size: 1.5rem;
+        .hero-subtitle {
+            font-size: 1.3rem;
             margin-bottom: 30px;
             opacity: 0.9;
-            animation: slideInUp 1s ease-out 0.3s both;
+            animation: slideInUp 1s ease 0.2s both;
         }
 
         .hero-image {
-            margin: 40px 0;
-            animation: bounceIn 1s ease-out 0.6s both;
-        }
-
-        .hero-image img {
-            max-width: 100%;
+            max-width: 400px;
+            width: 100%;
             height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-image img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Live Stats */
-        .live-stats {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            margin: 30px auto;
+            display: block;
             border-radius: 15px;
-            padding: 20px;
-            margin: 30px 0;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            animation: slideInUp 1s ease-out 0.9s both;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            animation: slideInUp 1s ease 0.4s both;
+        }
+
+        /* Stats Counter */
+        .stats {
+            background: white;
+            padding: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
         }
 
         .stat-item {
-            text-align: center;
-            margin: 10px;
+            padding: 20px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: slideInUp 0.8s ease forwards;
         }
+
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.4s; }
 
         .stat-number {
-            font-size: 2rem;
-            font-weight: bold;
-            display: block;
-            color: #FFD700;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Countdown Timer */
-        .countdown-section {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-
-        .countdown-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            animation: pulse 2s infinite;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .time-unit {
-            background: rgba(255,255,255,0.2);
-            border-radius: 10px;
-            padding: 20px;
-            min-width: 80px;
-            backdrop-filter: blur(10px);
-        }
-
-        .time-number {
             font-size: 2.5rem;
             font-weight: bold;
             display: block;
         }
 
-        .time-label {
-            font-size: 0.9rem;
+        .stat-label {
+            font-size: 1rem;
             opacity: 0.9;
         }
 
         /* Product Display */
         .product-display {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
-            color: #2c3e50;
+            color: #333;
             position: relative;
         }
 
@@ -180,7 +148,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border-radius: 2px;
         }
 
@@ -195,43 +163,38 @@
             background: white;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .product-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
         .product-card img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            transition: transform 0.3s ease;
         }
 
-        .product-card:hover img {
-            transform: scale(1.1);
+        .product-card-content {
+            padding: 25px;
+            text-align: center;
         }
 
-        .card-content {
-            padding: 20px;
-        }
-
-        .card-title {
+        .product-card h3 {
             font-size: 1.3rem;
-            font-weight: bold;
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: #333;
         }
 
-        .card-description {
-            color: #7f8c8d;
+        .product-card p {
+            color: #666;
             line-height: 1.6;
         }
 
-        /* Features Section */
+        /* Features */
         .features {
             padding: 80px 0;
             background: white;
@@ -239,93 +202,109 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
             margin-top: 50px;
         }
 
-        .feature-item {
-            text-align: center;
+        .feature-card {
+            display: flex;
+            align-items: center;
             padding: 30px;
-            border-radius: 15px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 20px;
             transition: transform 0.3s ease;
         }
 
-        .feature-item:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
         }
 
         .feature-icon {
-            font-size: 3rem;
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 2rem;
             color: #667eea;
-            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .feature-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-            color: #2c3e50;
+        .feature-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #333;
         }
 
-        .feature-description {
-            color: #7f8c8d;
+        .feature-content p {
+            color: #666;
             line-height: 1.6;
         }
 
-        /* How to Use Section */
+        /* How to Use */
         .how-to-use {
             padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
         }
 
         .steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
 
-        .step-item {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
+        .step-card {
+            background: white;
             padding: 30px;
+            border-radius: 20px;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
             transition: transform 0.3s ease;
         }
 
-        .step-item:hover {
-            transform: scale(1.05);
+        .step-card:hover {
+            transform: translateY(-5px);
         }
 
         .step-number {
-            font-size: 3rem;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .step-title {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-
-        .step-description {
-            opacity: 0.9;
-            line-height: 1.6;
+        .step-card img {
+            width: 100%;
+            max-width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 20px 0;
         }
 
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: white;
         }
 
-        .testimonial-grid {
+        .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
@@ -333,16 +312,12 @@
         }
 
         .testimonial-card {
-            background: white;
-            border-radius: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            color: white;
             position: relative;
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
         }
 
         .testimonial-card::before {
@@ -351,18 +326,11 @@
             top: -10px;
             left: 20px;
             font-size: 4rem;
-            color: #667eea;
             opacity: 0.3;
         }
 
-        .stars {
-            color: #FFD700;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-
         .testimonial-text {
-            color: #7f8c8d;
+            font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 20px;
             font-style: italic;
@@ -370,145 +338,148 @@
 
         .testimonial-author {
             font-weight: bold;
-            color: #2c3e50;
+            display: flex;
+            align-items: center;
         }
 
-        /* Pricing Section */
-        .pricing {
-            padding: 80px 0;
-            background: white;
+        .testimonial-author::before {
+            content: '⭐⭐⭐⭐⭐';
+            margin-right: 10px;
+        }
+
+        /* Countdown Timer */
+        .countdown-section {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 60px 0;
             text-align: center;
+            color: #333;
         }
 
-        .pricing-card {
+        .countdown-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .countdown-timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .countdown-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        /* Price Banner */
+        .price-banner {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 60px 0;
+            text-align: center;
             color: white;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            margin: 40px auto;
-            position: relative;
-            overflow: hidden;
         }
 
-        .pricing-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
+        .price-content {
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .price-tag {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
         }
 
-        .pricing-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .original-price {
+        .price-original {
             font-size: 1.5rem;
             text-decoration: line-through;
             opacity: 0.7;
-            margin-bottom: 10px;
+            display: block;
         }
 
-        .sale-price {
+        .price-current {
             font-size: 3rem;
             font-weight: bold;
-            color: #FFD700;
-            margin-bottom: 20px;
+            color: #ffd700;
+            margin: 10px 0;
         }
 
-        .offer-text {
-            font-size: 1.2rem;
+        .price-promo {
+            font-size: 2rem;
+            color: #ff6b6b;
             margin-bottom: 30px;
-            background: rgba(255,255,255,0.2);
-            padding: 15px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            font-weight: bold;
         }
 
-        /* CTA Buttons */
         .cta-button {
             display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
             color: white;
-            padding: 18px 40px;
-            text-decoration: none;
+            padding: 20px 40px;
             border-radius: 50px;
-            font-size: 1.2rem;
+            text-decoration: none;
+            font-size: 1.3rem;
             font-weight: bold;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: left 0.5s;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            animation: pulse 2s infinite;
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         }
 
-        /* WhatsApp Float Button */
+        /* WhatsApp Float */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background: #25d366;
             color: white;
             border-radius: 50px;
-            padding: 15px 20px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            z-index: 100;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            z-index: 1000;
-            animation: pulse 2s infinite;
-            transition: transform 0.3s ease;
+            animation: bounce 2s infinite;
         }
 
         .whatsapp-float:hover {
             transform: scale(1.1);
+            color: white;
         }
 
         /* Animations */
-        @keyframes slideInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         @keyframes slideInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -516,172 +487,136 @@
             }
         }
 
-        @keyframes bounceIn {
-            from {
-                opacity: 0;
-                transform: scale(0.3);
-            }
-            50% {
-                opacity: 1;
-                transform: scale(1.05);
-            }
-            70% {
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
-        /* Responsive Design */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-title {
                 font-size: 2.5rem;
             }
-            
-            .hero p {
-                font-size: 1.2rem;
+
+            .hero-subtitle {
+                font-size: 1.1rem;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
-            .container {
-                padding: 0 15px;
-            }
-            
+
             .countdown-timer {
-                gap: 10px;
+                flex-wrap: wrap;
+                gap: 15px;
             }
-            
-            .time-unit {
-                padding: 15px;
-                min-width: 60px;
+
+            .countdown-item {
+                min-width: 70px;
             }
-            
-            .time-number {
-                font-size: 2rem;
+
+            .feature-card {
+                flex-direction: column;
+                text-align: center;
             }
-            
-            .sale-price {
+
+            .feature-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+
+            .price-current {
                 font-size: 2.5rem;
             }
-        }
 
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
+            .price-promo {
+                font-size: 1.5rem;
             }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
+
             .cta-button {
-                font-size: 1rem;
                 padding: 15px 30px;
-            }
-            
-            .live-stats {
-                flex-direction: column;
-                gap: 10px;
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Header Section -->
+    <section class="header">
         <div class="container">
             <div class="hero-content">
-                <h1>FloorScrubBrush 3-in-1</h1>
-                <p>Revolusi Pembersihan Lantai Modern - Cepat, Mudah, dan Efektif!</p>
-                
-                <div class="hero-image">
-                    <img src="https://ae-pic-a1.aliexpress-media.com/kf/S867e70ca00794e21a16621c2d11f9d542.jpg" alt="FloorScrubBrush 3-in-1 Revolusioner">
-                </div>
-
-                <!-- Live Stats -->
-                <div class="live-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="viewers">2,847</span>
-                        <span class="stat-label">Sedang Melihat</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="stock">47</span>
-                        <span class="stat-label">Stok Tersisa</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">4.9★</span>
-                        <span class="stat-label">Rating Pembeli</span>
-                    </div>
-                </div>
+                <div class="badge">🔥 PROMO TERBATAS HARI INI!</div>
+                <h1 class="hero-title">FloorScrub Brush 3In1</h1>
+                <p class="hero-subtitle">Revolusi Pembersihan Lantai Modern - 3 Fungsi dalam 1 Alat</p>
+                <img src="https://ae-pic-a1.aliexpress-media.com/kf/S867e70ca00794e21a16621c2d11f9d542.jpg" alt="FloorScrub Brush 3In1" class="hero-image">
             </div>
         </div>
     </section>
 
-    <!-- Countdown Section -->
-    <section class="countdown-section">
+    <!-- Stats Counter -->
+    <section class="stats">
         <div class="container">
-            <h2 class="countdown-title">⚡ PROMO TERBATAS BERAKHIR DALAM ⚡</h2>
-            <div class="countdown-timer">
-                <div class="time-unit">
-                    <span class="time-number" id="hours">08</span>
-                    <span class="time-label">Jam</span>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number" id="viewers">2,847</span>
+                    <span class="stat-label">Sedang Melihat</span>
                 </div>
-                <div class="time-unit">
-                    <span class="time-number" id="minutes">35</span>
-                    <span class="time-label">Menit</span>
+                <div class="stat-item">
+                    <span class="stat-number" id="stock">23</span>
+                    <span class="stat-label">Stok Tersisa</span>
                 </div>
-                <div class="time-unit">
-                    <span class="time-number" id="seconds">42</span>
-                    <span class="time-label">Detik</span>
+                <div class="stat-item">
+                    <span class="stat-number" id="sold">1,256</span>
+                    <span class="stat-label">Terjual Hari Ini</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product Display Section -->
+    <!-- Product Display -->
     <section class="product-display">
         <div class="container">
-            <h2 class="section-title">Kenapa FloorScrubBrush 3-in-1?</h2>
-            
+            <h2 class="section-title">Kenapa FloorScrub Brush 3In1?</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="https://ae01.alicdn.com/kf/S323dafec0baa49b8ae79fe3b99d2127dx.jpg" alt="FloorScrubBrush Display">
-                    <div class="card-content">
-                        <h3 class="card-title">Desain Ergonomis & Modern</h3>
-                        <p class="card-description">Handle yang nyaman dengan desain anti-slip, memudahkan pembersihan lantai tanpa membungkuk atau berlutut.</p>
+                    <img src="https://ae01.alicdn.com/kf/S323dafec0baa49b8ae79fe3b99d2127dx.jpg" alt="Desain Ergonomis">
+                    <div class="product-card-content">
+                        <h3>Desain Ergonomis & Modern</h3>
+                        <p>Pegangan nyaman yang tidak membuat tangan cepat lelah, cocok untuk pembersihan area luas</p>
                     </div>
                 </div>
-                
                 <div class="product-card">
-                    <img src="https://ae01.alicdn.com/kf/S545c9af1630f4365a74445e58f1889256.jpg" alt="FloorScrubBrush Fungsi">
-                    <div class="card-content">
-                        <h3 class="card-title">3 Fungsi dalam 1 Alat</h3>
-                        <p class="card-description">Sikat, pel, dan scraper dalam satu alat! Hemat tempat, hemat waktu, dan hasil pembersihan maksimal.</p>
+                    <img src="https://ae01.alicdn.com/kf/S545c9af1630f4365a74445e58f1889256.jpg" alt="3 Fungsi Dalam 1 Alat">
+                    <div class="product-card-content">
+                        <h3>3 Fungsi Dalam 1 Alat</h3>
+                        <p>Sikat, pel, dan scraper dalam satu produk. Hemat ruang penyimpanan dan lebih efisien</p>
                     </div>
                 </div>
-                
                 <div class="product-card">
-                    <img src="https://ae01.alicdn.com/kf/S983ea3f88a8e47cd9614bc147590514eG.jpg" alt="FloorScrubBrush Hasil">
-                    <div class="card-content">
-                        <h3 class="card-title">Hasil Pembersihan Sempurna</h3>
-                        <p class="card-description">Mengangkat kotoran membandel, noda bekas makanan, dan sisa-sisa deterjen dengan mudah dan efektif.</p>
+                    <img src="https://ae01.alicdn.com/kf/S983ea3f88a8e47cd9614bc147590514eG.jpg" alt="Mudah Digunakan">
+                    <div class="product-card-content">
+                        <h3>Mudah & Praktis</h3>
+                        <p>Instalasi mudah tanpa perlu tools khusus. Langsung bisa digunakan setelah dibuka dari kemasan</p>
                     </div>
                 </div>
             </div>
@@ -691,312 +626,348 @@
     <!-- Features Section -->
     <section class="features">
         <div class="container">
-            <h2 class="section-title">Keunggulan Produk</h2>
-            
+            <h2 class="section-title">Keunggulan Utama</h2>
             <div class="features-grid">
-                <div class="feature-item">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-magic"></i>
                     </div>
-                    <h3 class="feature-title">Sikat Cerdas</h3>
-                    <p class="feature-description">Bulu sikat yang fleksibel dapat menjangkau sudut-sudut sulit dan mengangkat kotoran dengan mudah.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-tint"></i>
+                    <div class="feature-content">
+                        <h3>Pembersihan Maksimal</h3>
+                        <p>Bulu sikat premium yang mampu mengangkat kotoran membandel di sela-sela keramik dan lantai bertekstur</p>
                     </div>
-                    <h3 class="feature-title">Sistem Penyaring</h3>
-                    <p class="feature-description">Teknologi penyaring canggih memisahkan air bersih dan kotor secara otomatis.</p>
                 </div>
-                
-                <div class="feature-item">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-clock"></i>
                     </div>
-                    <h3 class="feature-title">Hemat Waktu</h3>
-                    <p class="feature-description">Pembersihan 3x lebih cepat dibanding sikat konvensional dengan hasil yang lebih bersih.</p>
+                    <div class="feature-content">
+                        <h3>Hemat Waktu 70%</h3>
+                        <p>Dengan 3 fungsi sekaligus, waktu pembersihan lantai menjadi lebih cepat dan efisien</p>
+                    </div>
                 </div>
-                
-                <div class="feature-item">
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="feature-title">Tahan Lama</h3>
-                    <p class="feature-description">Material premium berkualitas tinggi yang tahan lama dan mudah dibersihkan.</p>
+                    <div class="feature-content">
+                        <h3>Tahan Lama & Berkualitas</h3>
+                        <p>Material premium yang tahan lama, anti karat, dan mudah dibersihkan setelah penggunaan</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Cocok Semua Lantai</h3>
+                        <p>Aman digunakan untuk keramik, marmer, granit, vinyl, dan berbagai jenis lantai lainnya</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How to Use Section -->
+    <!-- How to Use -->
     <section class="how-to-use">
         <div class="container">
             <h2 class="section-title">Cara Penggunaan</h2>
-            
             <div class="steps-grid">
-                <div class="step-item">
+                <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3 class="step-title">Isi Air</h3>
-                    <p class="step-description">Isi tangki dengan air bersih, tambahkan deterjen sesuai kebutuhan untuk hasil optimal.</p>
+                    <img src="https://ae01.alicdn.com/kf/S0e4afb64343547a98106403a93ed6bf1W.jpg" alt="Pemasangan">
+                    <h3>Pemasangan Mudah</h3>
+                    <p>Pasang kepala sikat ke handle dengan mudah. Tidak perlu tools khusus, cukup putar dan kencangkan</p>
                 </div>
-                
-                <div class="step-item">
+                <div class="step-card">
                     <div class="step-number">2</div>
-                    <h3 class="step-title">Sikat Lantai</h3>
-                    <p class="step-description">Gerakkan sikat maju mundur pada area yang kotor, biarkan sikat bekerja mengangkat kotoran.</p>
+                    <img src="https://ae01.alicdn.com/kf/Sb2ac66d0857f4b14a138a7a0ed5d3d12Y.jpg" alt="Aplikasi Pembersih">
+                    <h3>Aplikasi Pembersih</h3>
+                    <p>Tuangkan cairan pembersih secukupnya pada area yang akan dibersihkan untuk hasil optimal</p>
                 </div>
-                
-                <div class="step-item">
+                <div class="step-card">
                     <div class="step-number">3</div>
-                    <h3 class="step-title">Pel & Keringkan</h3>
-                    <p class="step-description">Gunakan fungsi pel untuk mengangkat air kotor, dan fungsi scraper untuk mengeringkan lantai.</p>
-                </div>
-                
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <h3 class="step-title">Selesai!</h3>
-                    <p class="step-description">Lantai bersih dan kering dalam sekali jalan! Simpan alat di tempat yang mudah dijangkau.</p>
+                    <img src="https://ae01.alicdn.com/kf/S11353c7c374448ba84a6c740205186dde.jpg" alt="Pembersihan">
+                    <h3>Sikat & Bersihkan</h3>
+                    <p>Gunakan gerakan memutar untuk membersihkan kotoran membandel, lalu pel untuk hasil yang mengkilap</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Testimoni Customer</h2>
-            
-            <div class="testimonial-grid">
+            <h2 class="section-title">Kata Mereka yang Sudah Merasakan</h2>
+            <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Luar biasa! Lantai rumah saya yang biasanya susah dibersihkan jadi kilap dalam hitungan menit. Produk ini benar-benar menghemat waktu dan tenaga saya.</p>
-                    <p class="testimonial-author">- Sari Dewi, Jakarta</p>
+                    <p class="testimonial-text">Wah ini sih game changer banget! Lantai rumah jadi bersih mengkilap dalam waktu singkat. Yang tadinya butuh 1 jam sekarang cuma 20 menit. Recommended!</p>
+                    <div class="testimonial-author">Sari W. - Jakarta</div>
                 </div>
-                
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Sebagai ibu rumah tangga dengan 3 anak, alat ini sangat membantu! Lantai bersih tanpa harus capek-capek. Kualitas bagus dan awet.</p>
-                    <p class="testimonial-author">- Rina Pratiwi, Surabaya</p>
+                    <p class="testimonial-text">Sebagai ibu rumah tangga dengan 3 anak kecil, alat ini benar-benar membantu banget. Praktis, mudah digunakan, dan hasilnya memuaskan. Worth it!</p>
+                    <div class="testimonial-author">Maya L. - Surabaya</div>
                 </div>
-                
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Sudah 6 bulan pakai dan masih seperti baru. Mudah digunakan, hasil bersih maksimal. Recommended banget untuk semua keluarga!</p>
-                    <p class="testimonial-author">- Budi Santoso, Bandung</p>
+                    <p class="testimonial-text">Kualitasnya bagus, tidak mudah rusak. Sudah 6 bulan pakai masih awet. Cocok untuk yang punya rumah besar seperti saya.</p>
+                    <div class="testimonial-author">Budi S. - Bandung</div>
                 </div>
-                
                 <div class="testimonial-card">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">Investasi terbaik untuk rumah! Hemat waktu, tenaga, dan hasilnya memuaskan. Tamu-tamu selalu komentar lantai rumah saya bersih dan mengkilap.</p>
-                    <p class="testimonial-author">- Maya Sari, Medan</p>
+                    <p class="testimonial-text">Awalnya ragu beli online, tapi ternyata produknya berkualitas. Pengiriman cepat, packaging rapi. Pelayanan juga ramah!</p>
+                    <div class="testimonial-author">Linda R. - Medan</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing">
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
         <div class="container">
-            <h2 class="section-title">Penawaran Terbatas!</h2>
-            
-            <div class="pricing-card">
-                <div class="pricing-content">
-                    <div class="original-price">Harga Normal: Rp 207.000</div>
-                    <div class="sale-price">Rp 199.000</div>
-                    <div class="offer-text">
-                        <strong>BELI 1 GRATIS 1 + GRATIS ONGKIR!</strong><br>
-                        Dapatkan 2 FloorScrubBrush 3-in-1 hanya dengan 1 harga!
-                    </div>
-                    <a href="https://nava.orderonline.id/checkout-floor-scrub-brush-3-in-1" class="cta-button">
-                        <i class="fas fa-shopping-cart"></i> ORDER SEKARANG
-                    </a>
+            <h2 class="countdown-title">⚡ PENAWARAN TERBATAS BERAKHIR DALAM:</h2>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="hours">23</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="minutes">59</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="seconds">45</span>
+                    <span class="countdown-label">Detik</span>
                 </div>
             </div>
-            
-            <div style="margin-top: 30px; color: #e74c3c; font-weight: bold;">
-                ⚠️ Promo terbatas! Hanya untuk 100 pembeli pertama hari ini!
+            <p style="font-size: 1.2rem; color: #d63031; font-weight: bold;">Jangan sampai terlewat! Stok sangat terbatas!</p>
+        </div>
+    </section>
+
+    <!-- Price Banner -->
+    <section class="price-banner">
+        <div class="container">
+            <div class="price-content">
+                <p class="price-tag">HARGA NORMAL:</p>
+                <span class="price-original">Rp 207.111</span>
+                
+                <p class="price-tag" style="margin-top: 30px;">HARGA HARI INI:</p>
+                <div class="price-current">Rp 139.000</div>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">untuk 1 pcs</p>
+                
+                <div class="price-promo">🔥 SPESIAL PROMO 🔥<br>BELI 1 GRATIS 1 + GRATIS ONGKIR<br>Rp 199.000</div>
+                
+                <a href="https://nava.orderonline.id/checkout-floor-scrub-brush-3-in-1" class="cta-button" target="_blank">
+                    🛒 BELI SEKARANG - BELI 1 GRATIS 1
+                </a>
+                
+                <div style="margin-top: 30px; font-size: 1rem; opacity: 0.9;">
+                    ✅ Garansi 100% Uang Kembali<br>
+                    ✅ Gratis Ongkir Seluruh Indonesia<br>
+                    ✅ Customer Service 24/7
+                </div>
             </div>
         </div>
     </section>
 
     <!-- WhatsApp Float Button -->
     <a href="https://api.whatsapp.com/send?phone=6285880343981&text=Halo%2C%20saya%20menginginkan%20produk%20anda%20FloorScrubBrush3In1%20%F0%9F%99%8F%F0%9F%8F%BB" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i> Chat Sekarang
+        <i class="fab fa-whatsapp"></i>
     </a>
 
     <script>
-        // Dynamic Counters
-        function updateCounters() {
+        // Dynamic Counter Animation
+        function animateCounters() {
             const viewers = document.getElementById('viewers');
             const stock = document.getElementById('stock');
+            const sold = document.getElementById('sold');
             
-            // Simulate dynamic viewers (2800-3000)
-            const viewerCount = Math.floor(Math.random() * 200) + 2800;
-            viewers.textContent = viewerCount.toLocaleString();
+            // Animate viewers (fluctuating)
+            setInterval(() => {
+                const currentViewers = parseInt(viewers.textContent);
+                const change = Math.floor(Math.random() * 20) - 10;
+                const newViewers = Math.max(2800, Math.min(3000, currentViewers + change));
+                viewers.textContent = newViewers.toLocaleString();
+            }, 3000);
             
-            // Simulate decreasing stock (40-50)
-            const stockCount = Math.floor(Math.random() * 11) + 40;
-            stock.textContent = stockCount;
+            // Animate stock (decreasing)
+            setInterval(() => {
+                const currentStock = parseInt(stock.textContent);
+                if (currentStock > 5) {
+                    const newStock = currentStock - 1;
+                    stock.textContent = newStock;
+                }
+            }, 45000); // Decrease every 45 seconds
+            
+            // Animate sold (increasing)
+            setInterval(() => {
+                const currentSold = parseInt(sold.textContent.replace(',', ''));
+                const newSold = currentSold + Math.floor(Math.random() * 3) + 1;
+                sold.textContent = newSold.toLocaleString();
+            }, 25000); // Increase every 25 seconds
         }
 
         // Countdown Timer
-        function updateCountdown() {
-            // Set target time to 8 hours 35 minutes 42 seconds from now
-            const targetTime = new Date().getTime() + (8 * 60 * 60 * 1000) + (35 * 60 * 1000) + (42 * 1000);
+        function startCountdown() {
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
             
-            const timer = setInterval(function() {
-                const now = new Date().getTime();
-                const distance = targetTime - now;
+            let totalSeconds = 24 * 3600 - 1; // 23:59:59
+            
+            function updateCountdown() {
+                const hours = Math.floor(totalSeconds / 3600);
+                const minutes = Math.floor((totalSeconds % 3600) / 60);
+                const seconds = totalSeconds % 60;
                 
-                if (distance < 0) {
-                    // Reset timer when it reaches zero
-                    clearInterval(timer);
-                    updateCountdown();
-                    return;
+                hoursEl.textContent = hours.toString().padStart(2, '0');
+                minutesEl.textContent = minutes.toString().padStart(2, '0');
+                secondsEl.textContent = seconds.toString().padStart(2, '0');
+                
+                totalSeconds--;
+                
+                if (totalSeconds < 0) {
+                    totalSeconds = 24 * 3600 - 1; // Reset to 23:59:59
                 }
-                
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
-                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
-                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
-                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
-            }, 1000);
-        }
-
-        // Smooth scroll animation for internal links
-        function smoothScroll() {
-            const links = document.querySelectorAll('a[href^="#"]');
-            links.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-        }
-
-        // Animate elements on scroll
-        function animateOnScroll() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            });
-
-            // Observe all cards and feature items
-            const animatedElements = document.querySelectorAll('.product-card, .feature-item, .testimonial-card, .step-item');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        }
-
-        // Initialize all functions when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            updateCounters();
+            }
+            
             updateCountdown();
-            smoothScroll();
-            animateOnScroll();
-            
-            // Update counters every 10 seconds
-            setInterval(updateCounters, 10000);
-            
-            // Add click tracking for CTA buttons
-            const ctaButtons = document.querySelectorAll('.cta-button');
-            ctaButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Simulate conversion tracking
-                    console.log('CTA Button clicked:', this.textContent);
-                });
+            setInterval(updateCountdown, 1000);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
+        });
+
+        // Initialize animations on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            animateCounters();
+            startCountdown();
             
-            // Add hover effects for product cards
-            const productCards = document.querySelectorAll('.product-card');
-            productCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
+            // Add loading animation to CTA buttons
+            document.querySelectorAll('.cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    this.innerHTML = '⏳ Memproses...';
+                    setTimeout(() => {
+                        this.innerHTML = '🛒 BELI SEKARANG - BELI 1 GRATIS 1';
+                    }, 2000);
                 });
             });
         });
 
-        // Add urgency notifications
-        function showUrgencyNotification() {
-            const notifications = [
-                "⚡ Sarah dari Jakarta baru saja memesan!",
-                "🔥 Stok tinggal sedikit lagi!",
-                "✨ Budi dari Surabaya baru saja checkout!",
-                "⏰ Promo berakhir dalam beberapa jam!",
-                "🎉 Maya dari Bandung mendapat gratis ongkir!"
-            ];
-            
-            let currentIndex = 0;
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'slideInUp 0.8s ease forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.product-card, .feature-card, .testimonial-card, .step-card');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                observer.observe(el);
+            });
+        });
+
+        // Add floating animation to WhatsApp button
+        setInterval(() => {
+            const whatsappBtn = document.querySelector('.whatsapp-float');
+            whatsappBtn.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                whatsappBtn.style.transform = 'scale(1)';
+            }, 200);
+        }, 3000);
+
+        // Add urgency messages that appear randomly
+        const urgencyMessages = [
+            "⚡ 15 orang sedang melihat produk ini!",
+            "🔥 2 produk baru saja terjual!",
+            "⏰ Stok tinggal sedikit, buruan pesan!",
+            "💥 Promo berakhir dalam hitungan jam!"
+        ];
+
+        function showUrgencyMessage() {
+            const message = urgencyMessages[Math.floor(Math.random() * urgencyMessages.length)];
             
             // Create notification element
             const notification = document.createElement('div');
+            notification.innerHTML = message;
             notification.style.cssText = `
                 position: fixed;
                 top: 20px;
                 right: 20px;
-                background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+                background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
                 color: white;
                 padding: 15px 20px;
                 border-radius: 10px;
-                box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-                z-index: 9999;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                z-index: 1000;
                 font-weight: bold;
+                animation: slideInRight 0.5s ease;
                 max-width: 300px;
-                transform: translateX(400px);
-                transition: transform 0.5s ease;
-                cursor: pointer;
+                font-size: 14px;
             `;
-            
-            notification.addEventListener('click', function() {
-                this.style.transform = 'translateX(400px)';
-                setTimeout(() => this.remove(), 500);
-            });
             
             document.body.appendChild(notification);
             
-            function cycleNotifications() {
-                notification.textContent = notifications[currentIndex];
-                notification.style.transform = 'translateX(0)';
-                
+            // Remove after 4 seconds
+            setTimeout(() => {
+                notification.style.animation = 'slideOutRight 0.5s ease';
                 setTimeout(() => {
-                    notification.style.transform = 'translateX(400px)';
-                }, 4000);
-                
-                currentIndex = (currentIndex + 1) % notifications.length;
-            }
-            
-            // Show first notification after 3 seconds
-            setTimeout(cycleNotifications, 3000);
-            
-            // Then show every 8 seconds
-            setInterval(cycleNotifications, 8000);
+                    if (notification.parentNode) {
+                        notification.parentNode.removeChild(notification);
+                    }
+                }, 500);
+            }, 4000);
         }
 
-        // Start urgency notifications
-        setTimeout(showUrgencyNotification, 2000);
+        // Show urgency messages periodically
+        setInterval(showUrgencyMessage, 15000); // Every 15 seconds
+
+        // Add CSS for notification animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInRight {
+                from {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            
+            @keyframes slideOutRight {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(100%);
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
