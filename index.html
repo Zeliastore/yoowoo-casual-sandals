@@ -3,1231 +3,1052 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LARGE CAPACITY CASUAL BAG - Premium Korean Quality</title>
-    <meta name="description" content="Tas kasual berkualitas premium dengan desain Korean modern. Kapasitas besar, cocok untuk aktivitas sehari-hari. spesial BELI 1 GRATIS 1 Promo terbatas!">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>YooWoo Casual Sandals - Sandal Nyaman dalam Hitungan Detik!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        :root {
+            --primary: #6a11cb;
+            --secondary: #2575fc;
+            --accent: #ff4d4d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --text: #333333;
+            --gray: #6c757d;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
+        
         body {
-            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--text);
             line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
         }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="30" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            color: white;
-        }
-
-        .hero-badge {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
-            padding: 8px 20px;
-            border-radius: 25px;
-            display: inline-block;
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: 500;
-            animation: slideInLeft 0.8s ease-out;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            animation: slideInLeft 0.8s ease-out 0.2s both;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            font-weight: 400;
-            animation: slideInLeft 0.8s ease-out 0.4s both;
-        }
-
-        .hero-image {
-            position: relative;
-            animation: slideInRight 0.8s ease-out 0.6s both;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Floating elements */
-        .floating-element {
-            position: absolute;
-            animation: floatUpDown 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        @keyframes floatUpDown {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
-        }
-
-        /* Stats Counter */
-        .stats {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 20px;
-            border-radius: 15px;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-top: 30px;
-            animation: slideInUp 0.8s ease-out 0.8s both;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-            color: #ffd700;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Countdown Timer */
-        .countdown-section {
-            background: #ff4757;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .countdown-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            animation: shimmer 2s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .countdown-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .countdown-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .countdown-timer {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .countdown-item {
-            background: rgba(255,255,255,0.2);
-            padding: 15px;
-            border-radius: 10px;
-            min-width: 80px;
-            backdrop-filter: blur(10px);
-        }
-
-        .countdown-number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-        }
-
-        .countdown-label {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-        }
-
-        /* Product Gallery */
-        .gallery-section {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
+        
+        /* Header */
+        header {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 20px;
-            color: #2c3e50;
+            display: flex;
+            align-items: center;
         }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 50px;
+        
+        .logo i {
+            margin-right: 10px;
         }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 50px;
-        }
-
-        .gallery-item {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+        
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
         }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 77, 77, 0.6);
         }
-
-        .gallery-item img {
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+        }
+        
+        .hero-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .hero-content {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+            position: relative;
+        }
+        
+        .hero-image img {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
+        
+        .hero-image img:hover {
+            transform: scale(1.03);
         }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.5);
+        
+        .tagline {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+        
+        .price-container {
             display: flex;
             align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            gap: 20px;
+            margin-bottom: 30px;
         }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 1;
+        
+        .current-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
         }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            backdrop-filter: blur(5px);
+        
+        .original-price {
+            font-size: 20px;
+            color: var(--gray);
+            text-decoration: line-through;
         }
-
-        .modal-content {
-            position: relative;
-            margin: 5% auto;
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
+        
+        .discount-badge {
+            background-color: var(--accent);
             color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            background: rgba(255,255,255,0.2);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .countdown {
+            background-color: rgba(255, 77, 77, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .countdown-title {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: var(--gray);
+        }
+        
+        .countdown-timer {
             display: flex;
-            align-items: center;
             justify-content: center;
-            transition: background 0.3s ease;
+            gap: 10px;
         }
-
-        .modal-close:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        /* Features Section */
-        .features-section {
-            padding: 80px 0;
+        
+        .countdown-item {
             background: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
-
+        
+        .countdown-number {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .countdown-label {
+            font-size: 10px;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 32px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+        
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 30px;
         }
-
+        
         .feature-card {
-            background: #f8f9fa;
-            padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-
+        
         .feature-card:hover {
             transform: translateY(-5px);
-            border-color: #667eea;
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-
+        
         .feature-icon {
-            font-size: 3rem;
-            color: #667eea;
+            font-size: 40px;
             margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
+        
         .feature-title {
-            font-size: 1.3rem;
-            font-weight: 600;
+            font-size: 20px;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: var(--dark);
         }
-
-        .feature-description {
-            color: #7f8c8d;
-            line-height: 1.6;
+        
+        .feature-desc {
+            color: var(--gray);
         }
-
+        
+        /* Gallery Section */
+        .gallery {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
         /* Testimonials */
-        .testimonials-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+        .testimonials {
+            padding: 60px 0;
+            background-color: white;
         }
-
+        
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
+        
         .testimonial-card {
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+            background-color: #f8f9fa;
             padding: 30px;
-            border-radius: 15px;
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-
+        
         .testimonial-text {
             font-style: italic;
             margin-bottom: 20px;
-            line-height: 1.6;
+            color: var(--text);
         }
-
+        
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 15px;
         }
-
-        .testimonial-avatar {
+        
+        .author-avatar {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 600;
+            margin-right: 15px;
+            object-fit: cover;
         }
-
-        .testimonial-info h4 {
+        
+        .author-name {
             font-weight: 600;
             margin-bottom: 5px;
         }
-
-        .testimonial-rating {
-            color: #ffd700;
+        
+        .author-title {
+            font-size: 14px;
+            color: var(--gray);
         }
-
-        /* Price Section */
-        .price-section {
-            padding: 80px 0;
-            background: #2c3e50;
+        
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            background-color: white;
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-answer.show {
+            display: block;
+        }
+        
+        /* Guarantee Section */
+        .guarantee {
+            padding: 60px 0;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
             text-align: center;
         }
-
-        .price-card {
-            background: white;
-            color: #2c3e50;
-            padding: 50px 40px;
-            border-radius: 20px;
-            max-width: 500px;
-            margin: 0 auto;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .price-card::before {
-            content: 'BEST SELLER';
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            background: #ff4757;
-            color: white;
-            padding: 8px 40px;
-            transform: rotate(45deg);
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
-        .price-original {
-            font-size: 1.5rem;
-            text-decoration: line-through;
-            color: #95a5a6;
-            margin-bottom: 10px;
-        }
-
-        .price-current {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #ff4757;
+        
+        .guarantee-icon {
+            font-size: 60px;
             margin-bottom: 20px;
         }
-
-        .price-save {
-            background: #27ae60;
+        
+        .guarantee-title {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee-desc {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background-color: white;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
             color: white;
-            padding: 8px 20px;
-            border-radius: 25px;
-            font-weight: 600;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
             margin-bottom: 30px;
-            display: inline-block;
         }
-
-        /* CTA Buttons */
-        .cta-section {
-            padding: 50px 0;
-            background: #f8f9fa;
-            text-align: center;
-        }
-
-        .cta-buttons {
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
             display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
+            align-items: center;
         }
-
-        .btn {
-            padding: 18px 40px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
+        
+        .footer-logo i {
+            margin-right: 10px;
+        }
+        
+        .footer-about {
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .footer-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-title:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: color 0.3s ease;
         }
-
-        .btn-primary {
-            background: linear-gradient(45deg, #ff4757, #ff6348);
+        
+        .footer-links a:hover {
             color: white;
-            box-shadow: 0 10px 30px rgba(255, 71, 87, 0.4);
         }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(255, 71, 87, 0.6);
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
         }
-
-        .btn-secondary {
-            background: #27ae60;
-            color: white;
-            box-shadow: 0 10px 30px rgba(39, 174, 96, 0.4);
-        }
-
-        .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 35px rgba(39, 174, 96, 0.6);
-        }
-
-        /* Floating WhatsApp */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background: #25d366;
-            color: white;
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            text-align: center;
-            font-size: 1.5rem;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
+            background-color: rgba(255,255,255,0.1);
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
+            transition: background-color 0.3s ease;
         }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6);
+        
+        .social-icon:hover {
+            background-color: var(--secondary);
         }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
         }
-
-        /* Animations */
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Mobile Responsive */
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 30px;
-            }
-
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-
-            .countdown-timer {
-                gap: 10px;
-            }
-
-            .countdown-item {
-                min-width: 60px;
-                padding: 10px;
-            }
-
-            .countdown-number {
-                font-size: 1.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .cta-buttons {
                 flex-direction: column;
-                align-items: center;
             }
-
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                justify-content: center;
+            
+            h1 {
+                font-size: 32px;
             }
-
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                bottom: 20px;
-                right: 20px;
-                font-size: 1.2rem;
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .cta-title {
+                font-size: 28px;
             }
         }
-
-        @media (max-width: 480px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            .price-current {
-                font-size: 2.5rem;
-            }
-
-            .modal-content {
-                margin: 10% auto;
-                max-width: 95%;
-            }
+        
+        /* Popup */
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .popup.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .popup-content {
+            background-color: white;
+            border-radius: 10px;
+            max-width: 500px;
+            width: 90%;
+            padding: 30px;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+        
+        .popup.show .popup-content {
+            transform: translateY(0);
+        }
+        
+        .popup-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--gray);
+        }
+        
+        .popup-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .popup-text {
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-shoe-prints"></i>
+                <span>YooWoo</span>
+            </div>
+            <button class="cta-button">Pesan Sekarang</button>
+        </div>
+    </header>
+    
     <!-- Hero Section -->
     <section class="hero">
-        <div class="floating-element">
-            <i class="fas fa-shopping-bag" style="font-size: 2rem; color: rgba(255,255,255,0.2);"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-star" style="font-size: 1.5rem; color: rgba(255,255,255,0.3);"></i>
-        </div>
-        <div class="floating-element">
-            <i class="fas fa-heart" style="font-size: 1.8rem; color: rgba(255,255,255,0.2);"></i>
-        </div>
-        
-        <div class="hero-container">
+        <div class="container hero-container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-fire"></i> TRENDING NOW
-                </div>
-                <h1 class="hero-title">LARGE CAPACITY<br>CASUAL BAG</h1>
-                <p class="hero-subtitle">Tas kasual premium dengan desain Korean modern. Kapasitas besar, kualitas terjamin, cocok untuk segala aktivitas Anda.</p>
+              <div class="hero-image">
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdve-lyrsse1njpgq8d.webp" alt="YooWoo Casual Sandals" class="fade-in">
+            </div>
+                <span class="tagline">Limited Edition</span>
+                <h1>YooWoo Casual Sandals - Nyaman Sepanjang Hari</h1>
+                <p class="subtitle">Sandal casual dengan bahan PVC super empuk yang membuat kaki Anda nyaman dari pagi hingga malam. Desain simpel yang cocok untuk berbagai aktivitas sehari-hari.</p>
                 
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number" id="viewers">2,847</span>
-                        <span class="stat-label">Viewers</span>
+                <div class="price-container">
+                    <span class="current-price">Rp185.645</span>
+                    <span class="original-price">Rp363.000</span>
+                    <span class="discount-badge">Diskon 49%</span>
+                </div>
+                
+                <div class="countdown">
+                    <div class="countdown-title">Promo berakhir dalam:</div>
+                    <div class="countdown-timer">
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="hours">23</div>
+                            <div class="countdown-label">Jam</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="minutes">59</div>
+                            <div class="countdown-label">Menit</div>
+                        </div>
+                        <div class="countdown-item">
+                            <div class="countdown-number" id="seconds">59</div>
+                            <div class="countdown-label">Detik</div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" id="stock">47</span>
-                        <span class="stat-label">Stock Left</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">4.9</span>
-                        <span class="stat-label">Rating</span>
-                    </div>
-                </div>
+                  </div>
+                <div style="display: flex; justify-content: center; align-items: center;">
+                <button class="cta-button" style="padding: 15px 30px; font-size: 18px;">
+                    <i class="fas fa-shopping-cart"></i> Pesan Sekarang
+                </button>
             </div>
-            
-            <div class="hero-image">
-                <img src="https://cdn.wshopon.com/image/f479c0d5132d2df64ebdbbfa8f59d6ba644ddcb5-500.png" alt="Large Capacity Casual Bag" onclick="openModal(this.src)">
-            </div>
-        </div>
-    </section>
-
-    <!-- Countdown Timer -->
-    <section class="countdown-section">
-        <div class="countdown-container">
-            <h2 class="countdown-title">⚡ PROMO TERBATAS BERAKHIR DALAM ⚡</h2>
-            <div class="countdown-timer">
-                <div class="countdown-item">
-                    <span class="countdown-number" id="hours">23</span>
-                    <span class="countdown-label">Jam</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="minutes">45</span>
-                    <span class="countdown-label">Menit</span>
-                </div>
-                <div class="countdown-item">
-                    <span class="countdown-number" id="seconds">30</span>
-                    <span class="countdown-label">Detik</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Gallery -->
-    <section class="gallery-section">
+            <!-- Features Section -->
+    <section class="features">
         <div class="container">
-            <h2 class="section-title">GALERI PRODUK</h2>
-            <p class="section-subtitle">Lihat detail dan kualitas premium dari berbagai sudut</p>
-            
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_1148481749631784226.gif')">
-                    <img src="https://cdn.orderonline.id/uploads/images_1148481749631784226.gif" alt="Fashion Display">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_1927121749628417125.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_1927121749628417125.png" alt="Fashion Display 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_9987441749629651587.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_9987441749629651587.png" alt="Fashion Display 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_6749361749629590871.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_6749361749629590871.png" alt="Detail Product 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_5281991749629591711.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_5281991749629591711.png" alt="Detail Product 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-                
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_5656861749629591398.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_5656861749629591398.png" alt="Detail Product 3">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <h2 class="section-title">MENGAPA MEMILIH PRODUK KAMI?</h2>
-            <p class="section-subtitle">Kualitas premium dengan desain yang memukau</p>
-            
+            <h2 class="section-title">Keunggulan YooWoo Casual Sandals</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-gem"></i>
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <h3 class="feature-title">Premium Quality</h3>
-                    <p class="feature-description">Dibuat dengan material berkualitas tinggi dan finishing yang sempurna. Tahan lama dan nyaman digunakan setiap hari.</p>
+                    <h3 class="feature-title">Nyaman Dipakai</h3>
+                    <p class="feature-desc">Bahan PVC yang empuk dan elastis membuat kaki Anda nyaman sepanjang hari tanpa menyebabkan lecet.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                        <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="feature-title">Large Capacity</h3>
-                    <p class="feature-description">Ruang penyimpanan yang luas dapat menampung semua kebutuhan Anda. Dari laptop hingga perlengkapan sehari-hari.</p>
+                    <h3 class="feature-title">Ringan & Fleksibel</h3>
+                    <p class="feature-desc">Desain yang ringan membuat Anda mudah bergerak dan cocok untuk berbagai aktivitas sehari-hari.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3 class="feature-title">Korean Style</h3>
-                    <p class="feature-description">Desain trendy ala Korea yang selalu update dengan fashion terkini. Cocok untuk berbagai gaya dan kesempatan.</p>
+                    <h3 class="feature-title">Desain Stylish</h3>
+                    <p class="feature-desc">Tampilan simpel namun trendy yang cocok dipadukan dengan berbagai gaya fashion Anda.</p>
                 </div>
                 
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="feature-title">Durable Material</h3>
-                    <p class="feature-description">Material yang kuat dan tahan air melindungi barang-barang Anda dari berbagai cuaca dan kondisi.</p>
+                    <h3 class="feature-title">Awet & Tahan Lama</h3>
+                    <p class="feature-desc">Material berkualitas tinggi yang tahan terhadap berbagai kondisi cuaca dan penggunaan sehari-hari.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="feature-title">Harga Terjangkau</h3>
+                    <p class="feature-desc">Kualitas premium dengan harga yang sangat terjangkau untuk kenyamanan maksimal.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="feature-title">Bonus Spesial</h3>
+                    <p class="feature-desc">Dapatkan bonus tas sandal eksklusif untuk setiap pembelian selama promo berlangsung.</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-section">
+    
+    <!-- Gallery Section -->
+    <section class="gallery">
         <div class="container">
-            <h2 class="section-title">APA KATA CUSTOMER KAMI?</h2>
-            <p class="section-subtitle">Testimoni asli dari customer yang puas</p>
+            <h2 class="section-title">Galeri Produk</h2>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdw5-lyrsse6nce5z1e.webp" alt="YooWoo Sandals Detail">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdyb-lyrssec74a0a9c.webp" alt="YooWoo Sandals Warna">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdx9-lyrsseh6wydicf.webp" alt="YooWoo Sandals Model">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdx9-lyrssenapffm18.webp" alt="YooWoo Sandals Pakai">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdwa-lyrssesagqd030.webp" alt="YooWoo Sandals Tampak Samping">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdw3-lyrsseyy6zjo73.webp" alt="YooWoo Sandals Tampak Atas">
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; text-align: center;">
+                <img src="https://down-id.img.susercontent.com/file/sg-11134201-7rdyc-lyrssf3y2h4cc5.webp" alt="Panduan Ukuran" style="max-width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Apa Kata Pelanggan Kami?</h2>
             
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Tas ini benar-benar amazing! Kapasitasnya besar banget, bisa muat laptop 14 inch plus semua perlengkapan kantor. Bahannya juga premium, ga mudah kusut. Recommended banget!"</p>
+                    <p class="testimonial-text">"Sandal YooWoo ini benar-benar nyaman! Aku pakai seharian jalan-jalan di mall sama teman-teman dan kakiku tidak sakit sama sekali. Bahannya empuk banget!"</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">SR</div>
-                        <div class="testimonial-info">
-                            <h4>Sari Rahmawati</h4>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                      </div>
+                            <div class="author-name">Dian Sastro</div>
+                               <div class="author-title">Guru, 28 tahun</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Kualitas jahitannya rapi banget, modelnya juga kekinian. Udah 6 bulan pakai masih kayak baru. Worth it banget sama harganya!"</p>
+                    <p class="testimonial-text">"Awalnya ragu karena harganya murah, tapi setelah pakai ternyata kualitasnya premium. Sudah beli 3 pasang untuk ganti-ganti warna. Recommended banget!"</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">AF</div>
-                        <div class="testimonial-info">
-                            <h4>Andi Firmansyah</h4>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <div>
+                            <div class="author-name">Maya Septi</div>
+                            <div class="author-title">Ibu Rumah Tangga, 35 tahun</div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="testimonial-card">
-                    <p class="testimonial-text">"Tasnya multifungsi banget! Bisa buat ke kampus, kerja, bahkan travelling. Desainnya minimalis tapi elegan. Pokoknya perfect!"</p>
+                    <p class="testimonial-text">"Desainnya simpel tapi elegan, cocok untuk dipakai kerja atau jalan-jalan. Yang paling aku suka bahannya tidak bikin lecet walau dipakai seharian."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">DM</div>
-                        <div class="testimonial-info">
-                            <h4>Dinda Maharani</h4>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Pelayanannya fast response, packaging rapi, dan produknya sesuai ekspektasi. Tas impian yang akhirnya kebeli! Terima kasih seller!"</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">RH</div>
-                        <div class="testimonial-info">
-                            <h4>Rizki Hidayat</h4>
-                            <div class="testimonial-rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                      </div>
+                            <div class="author-name">Rina Melati</div>
+                            <div class="author-title">Karyawan Bank, 42 tahun</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Color Variants -->
-    <section class="gallery-section">
+    
+    <!-- FAQ Section -->
+    <section class="faq">
         <div class="container">
-            <h2 class="section-title">PILIHAN WARNA</h2>
-            <p class="section-subtitle">Tersedia dalam berbagai warna menarik</p>
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
             
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_7753911749628416729.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_7753911749628416729.png" alt="Color Variant 1">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana kualitas bahan sandal YooWoo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>YooWoo Casual Sandals menggunakan bahan PVC berkualitas tinggi yang empuk, elastis, dan tahan lama. Bahan ini dirancang khusus untuk memberikan kenyamanan maksimal tanpa menyebabkan lecet pada kaki.</p>
                     </div>
                 </div>
                 
-                <div class="gallery-item" onclick="openModal('https://cdn.orderonline.id/uploads/images_5793521749628413578.png')">
-                    <img src="https://cdn.orderonline.id/uploads/images_5793521749628413578.png" alt="Color Variant 2">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus" style="font-size: 2rem; color: white;"></i>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apa saja warna yang tersedia?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menyediakan berbagai pilihan warna trendi seperti hitam, putih, nude, dan pastel. Silakan lihat galeri produk untuk melihat semua varian warna yang tersedia.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana cara menentukan ukuran yang tepat?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami menyediakan panduan ukuran lengkap di halaman produk. Secara umum, sandal kami memiliki ukuran standar (S: 36-37, M: 38-39, L: 40-41). Jika Anda berada di antara dua ukuran, kami sarankan memilih ukuran yang lebih besar.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama pengiriman biasanya?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Waktu pengiriman bervariasi tergantung lokasi pengiriman. Untuk wilayah Jawa biasanya 2-3 hari kerja, sedangkan luar Jawa 3-5 hari kerja. Kami menggunakan jasa pengiriman terpercaya untuk memastikan produk sampai dengan aman.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah ada garansi untuk produk ini?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kami memberikan garansi 30 hari untuk cacat produksi. Jika Anda menerima produk yang rusak atau tidak sesuai, silakan hubungi customer service kami untuk proses pengembalian atau penukaran.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Price Section -->
-    <section class="price-section">
+    
+    <!-- Guarantee Section -->
+    <section class="guarantee">
         <div class="container">
-            <h2 class="section-title">HARGA SPESIAL HARI INI!</h2>
-            <p class="section-subtitle">Jangan lewatkan kesempatan emas ini</p>
+            <div class="guarantee-icon">
+                <i class="fas fa-award"></i>
+            </div>
+            <h2 class="guarantee-title">Garansi Kepuasan 100%</h2>
+            <p class="guarantee-desc">Kami yakin Anda akan menyukai YooWoo Casual Sandals. Jika dalam 30 hari Anda tidak puas dengan produk kami, kami akan mengembalikan uang Anda tanpa pertanyaan.</p>
+            <button class="cta-button" style="padding: 15px 40px; font-size: 18px;">
+                <i class="fas fa-lock"></i> Pesan Sekarang - Aman & Terjamin
+            </button>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2 class="cta-title">Jangan Lewatkan Kesempatan Ini!</h2>
+            <p class="cta-subtitle">Dapatkan YooWoo Casual Sandals dengan diskon 49% hanya untuk hari ini saja. Stok terbatas!</p>
             
-            <div class="price-card">
-                <div class="price-original">Rp 292.500</div>
-                <div class="price-current">Rp 185.000</div>
-                <div class="price-save">HEMAT Rp 97.500</div>
+            <div class="price-container" style="justify-content: center; margin-bottom: 30px;">
+                <span class="current-price">Rp185.645</span>
+                <span class="original-price">Rp363.000</span>
+                <span class="discount-badge">Diskon 49%</span>
+            </div>
+            
+            <button class="cta-button" style="padding: 20px 50px; font-size: 20px;">
+                <i class="fas fa-shopping-cart"></i> Pesan Sekarang Sebelum Kehabisan
+            </button>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div>
+                    <div class="footer-logo">
+                        <i class="fas fa-shoe-prints"></i>
+                        <span>YooWoo</span>
+                    </div>
+                    <p class="footer-about">YooWoo menghadirkan sandal casual berkualitas tinggi dengan desain modern dan bahan terbaik untuk kenyamanan maksimal penggunanya.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
                 
-                <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="color: #2c3e50; margin-bottom: 15px;">✨ BONUS EKSKLUSIF ✨</h4>
-                    <ul style="text-align: left; color: #2c3e50; list-style: none; padding: 0;">
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #27ae60; margin-right: 10px;"></i>FREE Ongkir Se-Indonesia</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #27ae60; margin-right: 10px;"></i>Garansi 1 Tahun</li>
-                        <li style="margin-bottom: 8px;"><i class="fas fa-check" style="color: #27ae60; margin-right: 10px;"></i>Pouch Eksklusif</li>
-                        <li><i class="fas fa-check" style="color: #27ae60; margin-right: 10px;"></i>Customer Service 24/7</li>
+                <div>
+                    <h3 class="footer-title">Produk</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Sandal Casual</a></li>
+                        <li><a href="#">Sandal Rumah</a></li>
+                        <li><a href="#">Sandal Pantai</a></li>
+                        <li><a href="#">New Arrival</a></li>
+                        <li><a href="#">Best Seller</a></li>
                     </ul>
                 </div>
                 
-                <div style="background: #ff4757; color: white; padding: 15px; border-radius: 10px; margin: 20px 0;">
-                    <h4 style="margin-bottom: 10px;">⚡ BELI 1 GRATIS 1 ⚡</h4>
-                    <p style="margin: 0; font-size: 0.9rem;">Hanya tersisa <strong id="stock-display">97 pcs</strong> lagi!</p>
+                <div>
+                    <h3 class="footer-title">Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Hubungi Kami</a></li>
+                        <li><a href="#">Pengiriman</a></li>
+                        <li><a href="#">Pembayaran</a></li>
+                        <li><a href="#">Pengembalian</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="footer-title">Perusahaan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="section-title">JANGAN SAMPAI KEHABISAN!</h2>
-            <p class="section-subtitle">Dapatkan Large Capacity Casual Bag sekarang juga</p>
             
-            <div class="cta-buttons">
-                <a href="https://nava.orderonline.id/checkout-large-capacity-casual-bag" class="btn btn-primary">
-                    <i class="fas fa-shopping-cart"></i>
-                    BELI SEKARANG JUGA
-                </a>
+            <div class="copyright">
+                &copy; 2023 YooWoo. All Rights Reserved.
             </div>
-            
-            <div style="margin-top: 30px; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <h4 style="color: #2c3e50; margin-bottom: 15px;"><i class="fas fa-shield-alt" style="color: #27ae60;"></i> JAMINAN 100% AMAN</h4>
-                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; align-items: center;">
-                    <div style="text-align: center;">
-                        <i class="fas fa-lock" style="font-size: 2rem; color: #27ae60; margin-bottom: 10px;"></i>
-                        <p style="margin: 0; font-size: 0.9rem; color: #7f8c8d;">Pembayaran Aman</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-truck" style="font-size: 2rem; color: #3498db; margin-bottom: 10px;"></i>
-                        <p style="margin: 0; font-size: 0.9rem; color: #7f8c8d;">Pengiriman Cepat</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <i class="fas fa-undo" style="font-size: 2rem; color: #e74c3c; margin-bottom: 10px;"></i>
-                        <p style="margin: 0; font-size: 0.9rem; color: #7f8c8d;">Garansi Uang Kembali</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer style="background: #2c3e50; color: white; padding: 40px 0; text-align: center;">
-        <div class="container">
-            <h3 style="margin-bottom: 20px;">LARGE CAPACITY CASUAL BAG</h3>
-            <p style="margin-bottom: 20px; opacity: 0.8;">Tas kasual premium dengan kualitas terjamin</p>
-            <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 20px;">
-                </a>
-                <a href="#" style="color: white; font-size: 1.5rem; transition: color 0.3s ease;">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" style="color: white; font-size: 1.5rem; transition: color 0.3s ease;">
-                    <i class="fab fa-facebook"></i>
-                </a>
-            </div>
-            <p style="margin: 0; opacity: 0.6; font-size: 0.9rem;">© 2024. All rights reserved. Made with ❤️ for our customers.</p>
         </div>
     </footer>
-
-    <!-- Modal -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="Product Image">
+    
+    <!-- Popup -->
+    <div class="popup" id="discountPopup">
+        <div class="popup-content">
+            <span class="popup-close" id="popupClose">&times;</span>
+            <h3 class="popup-title">DISKON SPESIAL 49%!</h3>
+            <p class="popup-text">Hai! Kami ingin menawarkan diskon eksklusif 49% untuk pembelian YooWoo Casual Sandals hari ini saja. Jangan lewatkan kesempatan ini!</p>
+            <button class="cta-button" style="width: 100%; padding: 15px; font-size: 18px;">
+                <i class="fas fa-gift"></i> Klaim Diskon Sekarang
+            </button>
         </div>
     </div>
-                
+    
     <script>
-        // Dynamic Counter Animation
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            
-            function updateCounter() {
-                start += increment;
-                if (start < target) {
-                    element.textContent = Math.floor(start).toLocaleString();
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    element.textContent = target.toLocaleString();
-                }
-            }
-            updateCounter();
-        }
-
         // Countdown Timer
-        function startCountdown() {
-            const countdownElements = {
-                hours: document.getElementById('hours'),
-                minutes: document.getElementById('minutes'),
-                seconds: document.getElementById('seconds')
-            };
-
-            let timeLeft = 24 * 3600 - 1; // 23:59:59
-
-            function updateCountdown() {
-                const hours = Math.floor(timeLeft / 3600);
-                const minutes = Math.floor((timeLeft % 3600) / 60);
-                const seconds = timeLeft % 60;
-
-                countdownElements.hours.textContent = hours.toString().padStart(2, '0');
-                countdownElements.minutes.textContent = minutes.toString().padStart(2, '0');
-                countdownElements.seconds.textContent = seconds.toString().padStart(2, '0');
-
-                if (timeLeft > 0) {
-                    timeLeft--;
-                } else {
-                    timeLeft = 24 * 3600 - 1; // Reset to 23:59:59
-                }
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        }
-
-        // Dynamic Viewers Counter
-        function updateViewers() {
-            const viewersElement = document.getElementById('viewers');
-            const currentViewers = parseInt(viewersElement.textContent.replace(/,/g, ''));
-            const newViewers = currentViewers + Math.floor(Math.random() * 10) + 1;
-            viewersElement.textContent = newViewers.toLocaleString();
-        }
-
-        // Dynamic Stock Counter
-        function updateStock() {
-            const stockElement = document.getElementById('stock');
-            const stockDisplayElement = document.getElementById('stock-display');
-            const currentStock = parseInt(stockElement.textContent);
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
             
-            if (currentStock > 1) {
-                const newStock = currentStock - 1;
-                stockElement.textContent = newStock;
-                stockDisplayElement.textContent = newStock + ' pcs';
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.classList.contains('show');
+                
+                // Close all answers first
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('show');
+                });
+                
+                // Toggle current answer if not open
+                if (!isOpen) {
+                    answer.classList.add('show');
+                }
+            });
+        });
+        
+        // Popup
+        const popup = document.getElementById('discountPopup');
+        const popupClose = document.getElementById('popupClose');
+        
+        // Show popup after 3 seconds
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 3000);
+        
+        // Close popup
+        popupClose.addEventListener('click', () => {
+            popup.classList.remove('show');
+        });
+        
+        // Close popup when clicking outside
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('show');
             }
-        }
-
-        // Modal Functions
-        function openModal(imageSrc) {
-            const modal = document.getElementById('imageModal');
-            const modalImage = document.getElementById('modalImage');
-            modalImage.src = imageSrc;
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-
-        // Smooth scrolling for anchor links
+        });
+        
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
                     });
                 }
             });
         });
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+        
+        // Add animation class when scrolling
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.feature-card, .testimonial-card, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('fade-in');
                 }
             });
-        }, observerOptions);
-
-        // Initialize everything when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Start counters and timers
-            startCountdown();
-            
-            // Animate initial counters
-            setTimeout(() => {
-                animateCounter(document.getElementById('viewers'), 2847);
-            }, 500);
-
-            // Update viewers every 30 seconds
-            setInterval(updateViewers, 30000);
-            
-            // Update stock every 5 minutes
-            setInterval(updateStock, 300000);
-
-            // Observe elements for scroll animations
-            const animatedElements = document.querySelectorAll('.feature-card, .testimonial-card, .gallery-item');
-            animatedElements.forEach(el => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(30px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(el);
-            });
-        });
-
-        // Add click tracking for analytics (optional)
-        function trackClick(element, action) {
-            // You can add Google Analytics or other tracking here
-            console.log('Clicked:', element, action);
-        }
-
-        // Add loading animation
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '1';
-        });
+        };
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
     </script>
 </body>
 </html>
